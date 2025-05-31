@@ -9,7 +9,7 @@ export default function About() {
           <div className="space-y-6">
             <div className="code-block p-6 rounded-lg border border-green-400/30">
               <div className="text-sm">
-                <span className="text-gray-500">/*</span>
+                <span className="text-gray-500">{"/*"}</span>
               </div>
               <div className="text-sm text-gray-400 ml-2">
                 * Passionate full-stack developer with 3+ years of experience
