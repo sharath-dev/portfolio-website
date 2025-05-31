@@ -1,115 +1,63 @@
-'use client';
-
-import React, { useState } from 'react';
-import { Button } from './ui/button';
-
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    body: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-      'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-    .then((response) => {
-    if (!response.ok) {
-      throw new Error('Failed to submit the form');
-    }
-    return response.json();
-    })
-    .then((data) => {
-      console.log('Form successfully submitted:', data);
-      alert('Thank you for your message!');
-      setFormData({ name: '', email: '', body: '' });
-    })
-    .catch((error) => {
-      console.error('Error submitting the form:', error);
-      alert('There was an error submitting your message. Please try again.');
-    });
-  };
-
+export default function Contact() {
   return (
-    <form onSubmit={handleSubmit} className="contact-form space-y-4 bg-[#111111] border-[0.2] border-gray-700 p-6 rounded-md mt-4">
-      <div className="flex gap-4">
-      <div className="flex flex-col">
-      <label htmlFor="name" className="text-lg font-medium text-white">Name:</label>
-      <input
-      type="text"
-      id="name"
-      name="name"
-      value={formData.name}
-      onChange={handleChange}
-      required
-      placeholder="Enter your name"
-      className="text-lg rounded-md p-2 outline-1 outline-gray-500 placeholder-gray-400"
-      />
-      </div>
-      <div className="flex flex-col">
-      <label htmlFor="email" className="text-lg font-medium text-white">Email:</label>
-      <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="Enter your email"
-      value={formData.email}
-      onChange={handleChange}
-      required
-      className="text-lg rounded-md p-2 outline-1 outline-gray-500 placeholder-gray-400"
-      />
-      </div>
-      </div>
-      <div className="flex flex-col">
-      <label htmlFor="body" className="text-lg font-medium text-white">Message:</label>
-      <textarea
-        id="body"
-        name="body"
-        value={formData.body}
-        placeholder="Enter your message"
-        onChange={handleChange}
-        required
-        className="text-lg rounded-md p-2 outline-1 outline-gray-500 placeholder-gray-400"
-      />
-      </div>
-      <Button variant="outline" className="mt-4">
-        <div className="flex items-center text-white py-2 rounded-m text-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-5 h-5 mr-2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M22 2L11 13"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M22 2L15 22L11 13L2 9L22 2Z"
-            />
-          </svg>
-          <span>Submit</span>
+    <section id="contact" className="py-20 bg-terminalGray">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold mb-16 text-primary">
+          <span className="text-gray-500"># </span>Contact
+        </h2>
+        <div className="code-block p-8 rounded-lg border border-green-400/30">
+          <div className="flex items-center mb-6">
+            <span className="text-gray-500">$ </span>
+            <span className="text-primary ml-2">curl -X GET https://api.sharath.dev/contact</span>
+          </div>
+          
+          <div className="space-y-4 text-sm">
+            <div className="text-green-400">
+              <span className="text-blue-400">const</span> 
+              <span className="text-yellow-400"> contactInfo</span> = {'{'}
+            </div>
+            <div className="ml-4 space-y-2">
+              <div className="flex items-center">
+                <span className="text-green-400 w-16">email:</span>
+                <a href="mailto:sharathdev99@gmail.com" className="text-accent hover:text-primary transition-colors">
+                  &quot;sharathdev99@gmail.com&quot;
+                </a>
+              </div>
+              <div className="flex items-center">
+                <span className="text-green-400 w-16">phone:</span>
+                <a href="tel:+13126844760" className="text-accent hover:text-primary transition-colors">
+                  &quot;+1 (312) 684 4760&quot;
+                </a>
+              </div>
+              <div className="flex items-center">
+                <span className="text-green-400 w-16">github:</span>
+                <a href="https://github.com/sharath-dev" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-primary transition-colors">
+                  &quot;github.com/sharath-dev&quot;
+                </a>
+              </div>
+              {/* <div className="flex items-center">
+                <span className="text-green-400 w-20">location:</span>
+                <span className="text-orange-400">
+                  &quot;Chicago, Illinois&quot;
+                </span>
+              </div> */}
+            </div>
+            <div className="text-green-400">{'};'}</div>
+            
+            <div className="mt-6 pt-6 border-t border-green-400/30">
+              <div className="text-gray-400">
+                <span className="text-purple-400">console</span>.<span className="text-blue-400">log</span>(<span className="text-orange-400">&quot;Always interested in new opportunities!&quot;</span>);
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-8 text-center">
+            <a href="mailto:sharathdev99@gmail.com" className="bg-primary text-terminal px-6 py-3 rounded hover:bg-secondary transition-colors font-bold">
+              {'>'} Send Message
+            </a>
+          </div>
         </div>
-      </Button>
-    </form>
-  );
-};
-
-export default ContactForm;
+      </div>
+    </section>
+  )
+}

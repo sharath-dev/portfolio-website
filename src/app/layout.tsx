@@ -3,9 +3,12 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sharath Devasahayam",
-  description: "Portfolio for Sharath Devasahayam",
-};
+  title: 'Sharath Devasahayam - Full Stack Developer',
+  description: 'Full Stack Developer crafting seamless web experiences with React, Node.js, Python, and AWS',
+  keywords: ['Full Stack Developer', 'React', 'Node.js', 'Python', 'AWS', 'TypeScript'],
+  authors: [{ name: 'Sharath Devasahayam' }],
+  creator: 'Sharath Devasahayam',
+}
 
 export default function RootLayout({
   children,
@@ -15,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`antialiased px-6`}
+        className={`bg-terminal text-green-400 font-mono antialiased`}
       >
         <ThemeProvider
           attribute="class"
