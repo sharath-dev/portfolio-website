@@ -40,9 +40,9 @@ export default function Hero() {
             <div className="ml-4 text-green-400">
               location: <span className="text-orange-400">&quot;Chicago, Illinois&quot;</span>,
             </div>
-            <div className="ml-4 text-green-400">
+            {/* <div className="ml-4 text-green-400">
               experience: <span className="text-orange-400">&quot;3+ years&quot;</span>,
-            </div>
+            </div> */}
             <div className="ml-4 text-green-400">
               specialization: [<span className="text-orange-400">&quot;React&quot;, &quot;Node.js&quot;, &quot;Python&quot;, &quot;AWS&quot;</span>],
             </div>
