@@ -8,7 +8,7 @@ export default function Contact() {
         <div className="code-block p-8 rounded-lg border border-green-400/30">
           <div className="flex items-center mb-6">
             <span className="text-gray-500">$ </span>
-            <span className="text-primary ml-2">curl -X GET https://api.sharath.dev/contact</span>
+            <span className="text-primary ml-2 wrap-anywhere w-[100%] ">curl -X GET https://api.sharath.dev/contact</span>
           </div>
           
           <div className="space-y-4 text-sm">
