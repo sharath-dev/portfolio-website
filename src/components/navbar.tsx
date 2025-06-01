@@ -31,11 +31,11 @@ export default function Navbar() {
             <span className="text-lg font-bold text-primary">$ ./sharath-devasahayam</span>
           </div>
           <div className="hidden md:flex items-center space-x-8 text-sm">
-            <button onClick={() => scrollToSection('about')} className="text-green-300 hover:text-primary transition-colors">--about</button>
-            <button onClick={() => scrollToSection('skills')} className="text-green-300 hover:text-primary transition-colors">--skills</button>
-            <button onClick={() => scrollToSection('experience')} className="text-green-300 hover:text-primary transition-colors">--experience</button>
-            <button onClick={() => scrollToSection('projects')} className="text-green-300 hover:text-primary transition-colors">--projects</button>
-            <button onClick={() => scrollToSection('contact')} className="text-green-300 hover:text-primary transition-colors">--contact</button>
+            <button onClick={() => scrollToSection('about')} className="text-green-300 hover:text-primary transition-colors cursor-pointer">--about</button>
+            <button onClick={() => scrollToSection('skills')} className="text-green-300 hover:text-primary transition-colors cursor-pointer">--skills</button>
+            <button onClick={() => scrollToSection('experience')} className="text-green-300 hover:text-primary transition-colors cursor-pointer">--experience</button>
+            <button onClick={() => scrollToSection('projects')} className="text-green-300 hover:text-primary transition-colors cursor-pointer">--projects</button>
+            <button onClick={() => scrollToSection('contact')} className="text-green-300 hover:text-primary transition-colors cursor-pointer">--contact</button>
           </div>
         </div>
       </div>

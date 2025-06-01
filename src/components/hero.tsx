@@ -58,13 +58,13 @@ export default function Hero() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <button 
               onClick={scrollToProjects}
-              className="bg-primary text-terminal px-6 py-3 rounded hover:bg-secondary transition-colors font-bold"
+              className="bg-primary text-terminal px-6 py-3 rounded hover:bg-secondary transition-colors font-bold cursor-pointer"
             >
               {'>'} View Projects
             </button>
             <button 
               onClick={scrollToContact}
-              className="border border-primary text-primary px-6 py-3 rounded hover:bg-primary/10 transition-colors"
+              className="border border-primary text-primary px-6 py-3 rounded hover:bg-primary/10 transition-colors cursor-pointer"
             >
               {'>'} Contact Me
             </button>

@@ -52,7 +52,7 @@ export default function Contact() {
           </div>
           
           <div className="mt-8 text-center">
-            <a href="mailto:sharathdev99@gmail.com" className="bg-primary text-terminal px-6 py-3 rounded hover:bg-secondary transition-colors font-bold">
+            <a href="mailto:sharathdev99@gmail.com" className="bg-primary text-terminal px-6 py-3 rounded hover:bg-secondary transition-colors font-bold cursor-pointer">
               {'>'} Send Message
             </a>
           </div>
